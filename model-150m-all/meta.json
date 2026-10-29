@@ -1,0 +1,28 @@
+{
+  "labels": [
+    "IRRELEVANT",
+    "UNRESOLVED",
+    "ECOSYSTEM",
+    "WRONG_RELATION",
+    "WRONG_INTENT",
+    "WRONG_TIME",
+    "DIRECT",
+    "PARTIAL",
+    "CONTEXT"
+  ],
+  "utility": {
+    "IRRELEVANT": 0.0,
+    "ECOSYSTEM": 0.1,
+    "WRONG_RELATION": 0.15,
+    "WRONG_INTENT": 0.2,
+    "UNRESOLVED": 0.25,
+    "WRONG_TIME": 0.3,
+    "CONTEXT": 0.4,
+    "PARTIAL": 0.7,
+    "DIRECT": 1.0
+  },
+  "hidden": 768,
+  "temperature": 0.6689613461494446,
+  "init": "cross-encoder/ettin-reranker-150m-v1",
+  "max_length": 128
+}

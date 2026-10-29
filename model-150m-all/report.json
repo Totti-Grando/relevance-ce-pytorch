@@ -1,0 +1,471 @@
+{
+  "temperature": 0.6689613461494446,
+  "val": {
+    "scorecard": {
+      "missed_rate": 0.1644,
+      "fooled_rate": 0.0234,
+      "balanced_accuracy": 0.9061,
+      "relevant_claims": 21827,
+      "non_relevant_claims": 167076,
+      "rows": [
+        {
+          "scenario": "Direct answer",
+          "label": "DIRECT",
+          "n": 7494,
+          "error_type": "missed",
+          "error": 0.2006,
+          "named": 0.7562,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Partial answer",
+          "label": "PARTIAL",
+          "n": 14333,
+          "error_type": "missed",
+          "error": 0.1455,
+          "named": 0.8372,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Same entity, wrong intent",
+          "label": "WRONG_INTENT",
+          "n": 25751,
+          "error_type": "fooled",
+          "error": 0.0356,
+          "named": 0.4796,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Same entity, wrong time",
+          "label": "WRONG_TIME",
+          "n": 1891,
+          "error_type": "fooled",
+          "error": 0.0,
+          "named": 1.0,
+          "mistaken_for": null
+        },
+        {
+          "scenario": "Same topic, wrong relationship",
+          "label": "WRONG_RELATION",
+          "n": 7901,
+          "error_type": "fooled",
+          "error": 0.0153,
+          "named": 0.9746,
+          "mistaken_for": "DIRECT"
+        },
+        {
+          "scenario": "Related ecosystem",
+          "label": "ECOSYSTEM",
+          "n": 1847,
+          "error_type": "fooled",
+          "error": 0.0,
+          "named": 1.0,
+          "mistaken_for": null
+        },
+        {
+          "scenario": "Unresolved connection",
+          "label": "UNRESOLVED",
+          "n": 1694,
+          "error_type": "fooled",
+          "error": 0.0289,
+          "named": 0.8571,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Relevant but unsupported context",
+          "label": "CONTEXT",
+          "n": 1277,
+          "error_type": "fooled",
+          "error": 0.0,
+          "named": 1.0,
+          "mistaken_for": null
+        },
+        {
+          "scenario": "Irrelevant",
+          "label": "IRRELEVANT",
+          "n": 126715,
+          "error_type": "fooled",
+          "error": 0.0223,
+          "named": 0.9122,
+          "mistaken_for": "WRONG_INTENT"
+        }
+      ]
+    },
+    "accuracy": 0.8458,
+    "macro_f1": 0.873,
+    "pair_accuracy": 0.8022,
+    "ndcg@5": 0.8041,
+    "ece": 0.024,
+    "direct_precision": 0.7233,
+    "predicted_direct": 7835,
+    "uncertain_share": 0.0264,
+    "per_class": {
+      "IRRELEVANT": {
+        "p": 0.888,
+        "r": 0.912,
+        "f1": 0.9,
+        "n": 126715
+      },
+      "UNRESOLVED": {
+        "p": 0.99,
+        "r": 0.857,
+        "f1": 0.919,
+        "n": 1694
+      },
+      "ECOSYSTEM": {
+        "p": 1.0,
+        "r": 1.0,
+        "f1": 1.0,
+        "n": 1847
+      },
+      "WRONG_RELATION": {
+        "p": 0.914,
+        "r": 0.975,
+        "f1": 0.943,
+        "n": 7901
+      },
+      "WRONG_INTENT": {
+        "p": 0.569,
+        "r": 0.48,
+        "f1": 0.52,
+        "n": 25751
+      },
+      "WRONG_TIME": {
+        "p": 0.997,
+        "r": 1.0,
+        "f1": 0.998,
+        "n": 1891
+      },
+      "DIRECT": {
+        "p": 0.723,
+        "r": 0.756,
+        "f1": 0.739,
+        "n": 7494
+      },
+      "PARTIAL": {
+        "p": 0.838,
+        "r": 0.837,
+        "f1": 0.838,
+        "n": 14333
+      },
+      "CONTEXT": {
+        "p": 0.998,
+        "r": 1.0,
+        "f1": 0.999,
+        "n": 1277
+      }
+    }
+  },
+  "test": {
+    "scorecard": {
+      "missed_rate": 0.1665,
+      "fooled_rate": 0.0248,
+      "balanced_accuracy": 0.9043,
+      "relevant_claims": 20739,
+      "non_relevant_claims": 163629,
+      "rows": [
+        {
+          "scenario": "Direct answer",
+          "label": "DIRECT",
+          "n": 6933,
+          "error_type": "missed",
+          "error": 0.2071,
+          "named": 0.7487,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Partial answer",
+          "label": "PARTIAL",
+          "n": 13806,
+          "error_type": "missed",
+          "error": 0.1462,
+          "named": 0.8309,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Same entity, wrong intent",
+          "label": "WRONG_INTENT",
+          "n": 25190,
+          "error_type": "fooled",
+          "error": 0.0402,
+          "named": 0.4682,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Same entity, wrong time",
+          "label": "WRONG_TIME",
+          "n": 1325,
+          "error_type": "fooled",
+          "error": 0.0008,
+          "named": 0.9992,
+          "mistaken_for": "DIRECT"
+        },
+        {
+          "scenario": "Same topic, wrong relationship",
+          "label": "WRONG_RELATION",
+          "n": 7333,
+          "error_type": "fooled",
+          "error": 0.0151,
+          "named": 0.9737,
+          "mistaken_for": "DIRECT"
+        },
+        {
+          "scenario": "Related ecosystem",
+          "label": "ECOSYSTEM",
+          "n": 1290,
+          "error_type": "fooled",
+          "error": 0.0008,
+          "named": 0.9984,
+          "mistaken_for": "PARTIAL"
+        },
+        {
+          "scenario": "Unresolved connection",
+          "label": "UNRESOLVED",
+          "n": 1220,
+          "error_type": "fooled",
+          "error": 0.0393,
+          "named": 0.8172,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Relevant but unsupported context",
+          "label": "CONTEXT",
+          "n": 877,
+          "error_type": "fooled",
+          "error": 0.0,
+          "named": 1.0,
+          "mistaken_for": null
+        },
+        {
+          "scenario": "Irrelevant",
+          "label": "IRRELEVANT",
+          "n": 126394,
+          "error_type": "fooled",
+          "error": 0.0228,
+          "named": 0.9132,
+          "mistaken_for": "WRONG_INTENT"
+        }
+      ]
+    },
+    "accuracy": 0.8434,
+    "macro_f1": 0.8656,
+    "pair_accuracy": 0.8006,
+    "ndcg@5": 0.7971,
+    "ece": 0.0233,
+    "direct_precision": 0.6822,
+    "predicted_direct": 7609,
+    "uncertain_share": 0.0266,
+    "per_class": {
+      "IRRELEVANT": {
+        "p": 0.889,
+        "r": 0.913,
+        "f1": 0.901,
+        "n": 126394
+      },
+      "UNRESOLVED": {
+        "p": 0.986,
+        "r": 0.817,
+        "f1": 0.894,
+        "n": 1220
+      },
+      "ECOSYSTEM": {
+        "p": 0.999,
+        "r": 0.998,
+        "f1": 0.999,
+        "n": 1290
+      },
+      "WRONG_RELATION": {
+        "p": 0.907,
+        "r": 0.974,
+        "f1": 0.939,
+        "n": 7333
+      },
+      "WRONG_INTENT": {
+        "p": 0.567,
+        "r": 0.468,
+        "f1": 0.513,
+        "n": 25190
+      },
+      "WRONG_TIME": {
+        "p": 0.998,
+        "r": 0.999,
+        "f1": 0.998,
+        "n": 1325
+      },
+      "DIRECT": {
+        "p": 0.682,
+        "r": 0.749,
+        "f1": 0.714,
+        "n": 6933
+      },
+      "PARTIAL": {
+        "p": 0.835,
+        "r": 0.831,
+        "f1": 0.833,
+        "n": 13806
+      },
+      "CONTEXT": {
+        "p": 1.0,
+        "r": 1.0,
+        "f1": 1.0,
+        "n": 877
+      }
+    }
+  },
+  "test_no_tags": {
+    "scorecard": {
+      "missed_rate": 0.1665,
+      "fooled_rate": 0.0249,
+      "balanced_accuracy": 0.9043,
+      "relevant_claims": 20739,
+      "non_relevant_claims": 163629,
+      "rows": [
+        {
+          "scenario": "Direct answer",
+          "label": "DIRECT",
+          "n": 6933,
+          "error_type": "missed",
+          "error": 0.2071,
+          "named": 0.7487,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Partial answer",
+          "label": "PARTIAL",
+          "n": 13806,
+          "error_type": "missed",
+          "error": 0.1462,
+          "named": 0.8309,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Same entity, wrong intent",
+          "label": "WRONG_INTENT",
+          "n": 25190,
+          "error_type": "fooled",
+          "error": 0.0402,
+          "named": 0.4682,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Same entity, wrong time",
+          "label": "WRONG_TIME",
+          "n": 1325,
+          "error_type": "fooled",
+          "error": 0.0,
+          "named": 1.0,
+          "mistaken_for": null
+        },
+        {
+          "scenario": "Same topic, wrong relationship",
+          "label": "WRONG_RELATION",
+          "n": 7333,
+          "error_type": "fooled",
+          "error": 0.015,
+          "named": 0.9738,
+          "mistaken_for": "DIRECT"
+        },
+        {
+          "scenario": "Related ecosystem",
+          "label": "ECOSYSTEM",
+          "n": 1290,
+          "error_type": "fooled",
+          "error": 0.0023,
+          "named": 0.9969,
+          "mistaken_for": "DIRECT"
+        },
+        {
+          "scenario": "Unresolved connection",
+          "label": "UNRESOLVED",
+          "n": 1220,
+          "error_type": "fooled",
+          "error": 0.05,
+          "named": 0.8066,
+          "mistaken_for": "IRRELEVANT"
+        },
+        {
+          "scenario": "Relevant but unsupported context",
+          "label": "CONTEXT",
+          "n": 877,
+          "error_type": "fooled",
+          "error": 0.0,
+          "named": 1.0,
+          "mistaken_for": null
+        },
+        {
+          "scenario": "Irrelevant",
+          "label": "IRRELEVANT",
+          "n": 126394,
+          "error_type": "fooled",
+          "error": 0.0228,
+          "named": 0.9132,
+          "mistaken_for": "WRONG_INTENT"
+        }
+      ]
+    },
+    "accuracy": 0.8434,
+    "macro_f1": 0.8648,
+    "pair_accuracy": 0.8006,
+    "ndcg@5": 0.797,
+    "ece": 0.0233,
+    "direct_precision": 0.681,
+    "predicted_direct": 7623,
+    "uncertain_share": 0.0266,
+    "per_class": {
+      "IRRELEVANT": {
+        "p": 0.889,
+        "r": 0.913,
+        "f1": 0.901,
+        "n": 126394
+      },
+      "UNRESOLVED": {
+        "p": 0.985,
+        "r": 0.807,
+        "f1": 0.887,
+        "n": 1220
+      },
+      "ECOSYSTEM": {
+        "p": 0.999,
+        "r": 0.997,
+        "f1": 0.998,
+        "n": 1290
+      },
+      "WRONG_RELATION": {
+        "p": 0.907,
+        "r": 0.974,
+        "f1": 0.939,
+        "n": 7333
+      },
+      "WRONG_INTENT": {
+        "p": 0.566,
+        "r": 0.468,
+        "f1": 0.513,
+        "n": 25190
+      },
+      "WRONG_TIME": {
+        "p": 0.998,
+        "r": 1.0,
+        "f1": 0.999,
+        "n": 1325
+      },
+      "DIRECT": {
+        "p": 0.681,
+        "r": 0.749,
+        "f1": 0.713,
+        "n": 6933
+      },
+      "PARTIAL": {
+        "p": 0.835,
+        "r": 0.831,
+        "f1": 0.833,
+        "n": 13806
+      },
+      "CONTEXT": {
+        "p": 1.0,
+        "r": 1.0,
+        "f1": 1.0,
+        "n": 877
+      }
+    }
+  }
+}
