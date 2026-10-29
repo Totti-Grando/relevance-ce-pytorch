@@ -14,11 +14,38 @@ model-150m-all/
 common.py             # model definition + load_model/format_pair (copied from the training repo)
 ```
 
+## Get the weights
+
+`model.safetensors` and `head.pt` are stored via Git LFS, so a plain `git clone` without git-lfs
+leaves them as ~130-byte pointer files. Two ways to get the real bytes:
+
+**A. With git-lfs installed:**
+```bash
+git clone https://github.com/Totti-Grando/relevance-ce-pytorch.git
+cd relevance-ce-pytorch && git lfs pull
+```
+
+**B. No git-lfs (download the release assets — plain HTTPS, works with curl or Python):**
+```bash
+git clone https://github.com/Totti-Grando/relevance-ce-pytorch.git
+cd relevance-ce-pytorch
+curl -L -o model-150m-all/encoder/model.safetensors \
+  https://github.com/Totti-Grando/relevance-ce-pytorch/releases/download/v1/model.safetensors
+curl -L -o model-150m-all/head.pt \
+  https://github.com/Totti-Grando/relevance-ce-pytorch/releases/download/v1/head.pt
+```
+Or in pure Python (no curl needed):
+```python
+import urllib.request
+base = "https://github.com/Totti-Grando/relevance-ce-pytorch/releases/download/v1"
+urllib.request.urlretrieve(f"{base}/model.safetensors", "model-150m-all/encoder/model.safetensors")
+urllib.request.urlretrieve(f"{base}/head.pt", "model-150m-all/head.pt")
+```
+
 ## Install (Intel GPU)
 ```bash
 pip install torch --index-url https://download.pytorch.org/whl/xpu   # XPU-enabled build
 pip install "transformers>=4.51" safetensors
-git lfs pull                                                         # fetch the weight files
 ```
 
 ## Run
