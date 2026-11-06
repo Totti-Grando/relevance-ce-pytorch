@@ -31,8 +31,17 @@ common.py             # model definition + load_model/format_pair (copied from t
 
 ## Get the weights
 
-`model.safetensors` (596 MB) is not in git at all; `head.pt` is in git LFS. Download the release
-assets (plain HTTPS, works with curl or Python):
+**Easiest: one zip.** `pytorch-model-150m-mh-cal.zip` (558 MB) on the v2 release holds the complete
+PyTorch model: `model-150m-mh-cal/` (encoder config + `model.safetensors`, tokenizer, `head.pt`, `meta.json`)
+and `common.py`. Unzip anywhere and `load_model("model-150m-mh-cal")` works with no clone.
+
+```bash
+curl -L -o pytorch-model-150m-mh-cal.zip https://github.com/Totti-Grando/relevance-ce-pytorch/releases/download/v2/pytorch-model-150m-mh-cal.zip
+unzip pytorch-model-150m-mh-cal.zip
+```
+
+**Or clone and fetch the two weight files.** `model.safetensors` (596 MB) is not in git at all; `head.pt`
+is in git LFS. Download the release assets (plain HTTPS, works with curl or Python):
 
 ```bash
 git clone https://github.com/Totti-Grando/relevance-ce-pytorch.git
@@ -53,6 +62,7 @@ The v2 release also carries ONNX files for CPU serving without PyTorch:
 
 | asset | what | notes |
 |---|---|---|
+| `pytorch-model-150m-mh-cal.zip` | complete PyTorch model + `common.py` | 558 MB; unzip and go |
 | `model.onnx` | fp32 graph, opset 17 | 599 MB; fastest accurate option on CPU |
 | `model.int8.onnx` | weight-only 8-bit (MatMulNBits, block 128, fp32 activations) | 270 MB; 99.7% label agreement with fp32 |
 | `tokenizer.zip` | HF tokenizer files for the ONNX inputs | same tokenizer as `encoder/` |
